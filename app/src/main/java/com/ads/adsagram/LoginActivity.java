@@ -3,6 +3,7 @@ package com.ads.adsagram;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -25,13 +26,23 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
     }
     public void btnSingUpClicked(View view){
-        String lcUsername = txtUsername.getText().toString();
-        String lcPassword = txtPassword.getText().toString();
-
+        final String lcUsername = txtUsername.getText().toString();
+        final String lcPassword = txtPassword.getText().toString();
+        if (lcUsername.isEmpty()||lcPassword.length()<5){
+            Toast.makeText(LoginActivity.this,"Username is required amd password should contains min 5 characters.",Toast.LENGTH_LONG).show();
+            return;
+        }
          firebaseAuth.createUserWithEmailAndPassword(lcUsername,lcPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
              @Override
              public void onSuccess(AuthResult authResult) {
                  Toast.makeText(LoginActivity.this, "SUCCESS",Toast.LENGTH_LONG).show();
+                 firebaseAuth.signInWithEmailAndPassword(lcUsername,lcPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                     @Override
+                     public void onSuccess(AuthResult authResult) {
+                         Intent lcIntent = new Intent(LoginActivity.this,FeedActivity.class);
+                         startActivity(lcIntent);
+                     }
+                 });
              }
          }).addOnFailureListener(new OnFailureListener() {
              @Override
@@ -41,6 +52,23 @@ public class LoginActivity extends AppCompatActivity {
          });
     }
     public void btnLoginClicked(View view){
-
+        final String lcUsername = txtUsername.getText().toString();
+        final String lcPassword = txtPassword.getText().toString();
+        if (lcUsername.isEmpty()||lcPassword.length()<5){
+            Toast.makeText(LoginActivity.this,"Username is required amd password should contains min 5 characters.",Toast.LENGTH_LONG).show();
+            return;
+        }
+        firebaseAuth.signInWithEmailAndPassword(lcUsername,lcPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Intent lcIntent = new Intent(LoginActivity.this,FeedActivity.class);
+                startActivity(lcIntent);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(LoginActivity.this, e.getLocalizedMessage().toString(),Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
