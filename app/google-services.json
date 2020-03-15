@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "903600180803",
+    "firebase_url": "https://adsagram-d882f.firebaseio.com",
+    "project_id": "adsagram-d882f",
+    "storage_bucket": "adsagram-d882f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903600180803:android:21405059e5e3fe51c00ef6",
+        "android_client_info": {
+          "package_name": "com.ads.adsagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903600180803-7j1jmlkctvjsdan859jt54vr6lj355cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9jGB1h9qpI6ufOtpMVO9F98pXp5v4Whk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903600180803-7j1jmlkctvjsdan859jt54vr6lj355cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
