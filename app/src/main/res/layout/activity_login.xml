@@ -8,11 +8,11 @@
 
     <EditText
         android:id="@+id/txtUsername"
-        android:layout_width="286dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:hint="Type Username"
         android:inputType="textPersonName"
@@ -22,11 +22,11 @@
 
     <EditText
         android:id="@+id/txtPassword"
-        android:layout_width="286dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:hint="Type Password"
         android:inputType="textPassword"
@@ -36,26 +36,41 @@
 
     <Button
         android:id="@+id/btnSingUp"
-        android:layout_width="151dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="77dp"
+        android:layout_marginTop="5dp"
         android:onClick="btnSingUpClicked"
         android:text="Sing Up"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="118dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
         android:onClick="btnLoginClicked"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSingUp" />
+
+    <segmented_control.widget.custom.android.com.segmentedcontrol.SegmentedControl
+        android:id="@+id/segmented_control"
+        android:layout_width="343dp"
+        android:layout_height="38dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        android:alwaysDrawnWithCache="true"
+        app:columnCount="3"
+        app:distributeEvenly="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:radius="12dp"
+        app:textVerticalPadding="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
