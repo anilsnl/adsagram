@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:menuCategory="system">
+        <item
+            android:id="@+id/menuNewPost"
+            android:icon="@drawable/ic_open_in_new_black_24dp"
+            android:title="@string/app_menu_upload" />
+        <item android:title="@string/app_menu_sing_out" android:id="@+id/menuSingOut" android:icon="@drawable/ic_power_settings_new_black_24dp"/>
+    </group>
+
+</menu>

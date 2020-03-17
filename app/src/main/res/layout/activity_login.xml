@@ -58,19 +58,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSingUp" />
 
-    <segmented_control.widget.custom.android.com.segmentedcontrol.SegmentedControl
-        android:id="@+id/segmented_control"
-        android:layout_width="343dp"
-        android:layout_height="38dp"
-        android:layout_margin="8dp"
-        android:layout_marginTop="12dp"
-        android:alwaysDrawnWithCache="true"
-        app:columnCount="3"
-        app:distributeEvenly="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:radius="12dp"
-        app:textVerticalPadding="6dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

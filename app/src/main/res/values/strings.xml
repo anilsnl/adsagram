@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">adsagram</string>
+
+    <string name="app_menu_upload">New Post</string>
+    <string name="app_menu_sing_out">Sing Out</string>
 </resources>
