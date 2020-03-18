@@ -1,4 +1,4 @@
-package com.ads.adsagram;
+package com.ads.adsagram.views;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ads.adsagram.adapters.PostsRecyclerViewAdapter;
+import com.ads.adsagram.R;
+import com.ads.adsagram.models.PostItemModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -56,7 +58,7 @@ public class FeedActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             firebaseAuth.signOut();
-                            Intent intentLogin = new Intent(getApplicationContext(),LoginActivity.class);
+                            Intent intentLogin = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intentLogin);
                             finish();
                         }
@@ -67,7 +69,7 @@ public class FeedActivity extends AppCompatActivity {
                 }
             }).show();
         }else if (item.getItemId()==R.id.menuNewPost){
-            Intent intentNewPost = new Intent(getApplicationContext(),NewPostActivity.class);
+            Intent intentNewPost = new Intent(getApplicationContext(), NewPostActivity.class);
             startActivity(intentNewPost);
         }
         return super.onOptionsItemSelected(item);

@@ -1,4 +1,4 @@
-package com.ads.adsagram;
+package com.ads.adsagram.models;
 
 public class PostItemModel {
     private String userMail;
